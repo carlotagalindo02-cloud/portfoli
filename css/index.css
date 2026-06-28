@@ -1,0 +1,986 @@
+/* -------------------- */
+/* IMPORTS I RESET */
+/* -------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=League+Spartan:wght@700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* -------------------- */
+/* VARIABLES */
+/* -------------------- */
+
+:root{
+    --marge-lateral:4%;
+
+    --color-sorra: #D6E3F0;
+    --color-cel:#A9BFD4;
+    --color-blanc:#FFFFFF;
+
+    --color-text:#43474A;
+
+    --font-h1:"League Spartan",sans-serif;
+    --font-text:"Inter",sans-serif;
+
+    --font-light:300;
+    --font-regular:400;
+    --font-medium:500;
+    --font-bold:700;
+    --font-extra-bold:800;
+}
+
+/* -------------------- */
+/* GLOBAL */
+/* -------------------- */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:var(--font-text);
+    background:var(--color-fons);
+    color:var(--color-text);
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* -------------------- */
+/* TIPOGRAFIA */
+/* -------------------- */
+
+.hero-content h1{
+    font-family:var(--font-h1);
+    font-size:clamp(5rem,14vw,12rem);
+    line-height:.85;
+}
+
+.about h2,
+.work h2,
+.experience h2,
+.contact h2{
+    font-size:clamp(3rem,8vw,8rem);
+    font-weight:var(--font-bold);
+    line-height:.9;
+}
+
+h3{
+    font-size:2rem;
+    font-weight:var(--font-bold);
+}
+
+.small{
+    font-size:.8rem;
+    text-transform:uppercase;
+    letter-spacing:.08em;
+}
+
+.intro{
+    max-width:550px;
+    font-size:1.1rem;
+}
+
+/* -------------------- */
+/* SECCIONS */
+/* -------------------- */
+
+.about,
+.work,
+.experience,
+.contact{
+    padding:100px var(--marge-lateral);
+}
+
+.about,
+.work,
+.experience,
+.contact,
+footer{
+    position:relative;
+    z-index:2;
+}
+
+/* -------------------- */
+/* HEADER */
+/* -------------------- */
+
+.hero{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:30px var(--marge-lateral);
+    z-index:10;
+    background: var(--color-cel);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav div{
+    display:flex;
+    gap:30px;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: var(--font-medium);
+    text-decoration: none;
+    color: inherit;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+nav a:not(.logo):hover{
+    opacity: 0.5;
+}
+
+.logo img{
+    height:60px;
+    display:block;
+}
+
+/* -------------------- */
+/* HERO CONTENT */
+/* -------------------- */
+
+.hero-content{
+    min-height: 100vh;
+    padding: 0 var(--marge-lateral);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../sobremi/ivan-bandura-WhIff5iuW-E-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white; 
+}
+
+.hero-content .small{
+    margin-bottom:20px;
+}
+
+.hero-content h1{
+    margin-bottom:25px;
+}
+
+/* -------------------- */
+/* SOBRE MI */
+/* -------------------- */
+
+.about{
+    background:var(--color-blanc);
+    margin-top:100px; 
+    padding:100px var(--marge-lateral);
+    display:grid;
+    grid-template-columns:1fr 800px;
+    gap:80px;
+    align-items:start;
+}
+
+.about-text h2{
+    margin:0;
+    line-height:.9;
+}
+
+.about-text p{
+    margin-top:20px;
+    margin-bottom:0;
+    max-width:650px;
+}
+
+.about-images{
+    display:block;
+    margin-top: 136px;
+}
+
+.about-images img{
+    width:100%;
+    height: 300px;
+    object-fit:cover;
+    display:block;
+}
+
+/* -------------------- */
+/* ESTUDIS */
+/* -------------------- */
+
+.experience {
+  padding: 6rem 4%;
+}
+
+.services-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-text);
+}
+
+.item span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  opacity: 0.5;
+  min-width: 40px;
+}
+
+.item > div:first-of-type {
+  flex: 0.8;
+}
+
+.item h3 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.item p {
+  color: var(--color-text);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.services-image {
+  width: 50%;
+  flex-shrink: 0;
+}
+
+.services-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.btn-cv{
+    display:block;
+    width:fit-content;
+    margin:40px auto;
+    padding:16px 38px;
+    border:1px solid var(--color-text);
+    background:transparent;
+    color:var(--color-text);
+    font-family:var(--font-text);
+    font-size:.9rem;
+    font-weight:var(--font-medium);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    text-decoration:none;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-cv:hover{
+    background:var(--color-cel);
+    border-color:var(--color-cel);
+}
+
+/* -------------------- */
+/* PROJECTES */
+/* -------------------- */
+
+.work{
+    background:var(--color-blanc);
+    padding:100px var(--marge-lateral);
+}
+
+/* CONTENIDOR DELS PROJECTES */
+
+.grid{
+    margin-top:50px;
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+    padding-bottom:10px;
+}
+
+.grid::-webkit-scrollbar{
+    display:none;
+}
+
+.grid article{
+    flex:0 0 480px;
+    scroll-snap-align:start;
+}
+
+/* TARGETA */
+
+article{
+    position:relative;
+    background:var(--color-sorra);
+    padding:15px;
+    display:flex;
+    flex-direction:column;
+}
+
+article img,
+article video{
+    width:100%;
+    display:block;
+}
+
+article h3{
+    margin-top:20px;
+}
+
+article p{
+    margin-top:10px;
+}
+
+/* GALERIA */
+
+.project-gallery{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;
+    gap:10px;
+    scrollbar-width:none;
+}
+
+.project-gallery::-webkit-scrollbar{
+    display:none;
+}
+
+/* IMATGES */
+
+.project-gallery img{
+    flex:0 0 100%;
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    scroll-snap-align:start;
+}
+
+/* VÍDEOS */
+
+.project-gallery video{
+    flex:0 0 100%;
+    width:100%;
+    height:300px;
+    object-fit:contain;
+    background:#000;
+    scroll-snap-align:start;
+}
+
+/* PORTADA BODONI */
+
+.project-gallery img.bodoni-portada{
+    object-fit:contain;
+}
+
+/* FLETXES */
+
+.gallery-arrow{
+    position:absolute;
+    top:205px;
+    transform:translateY(-50%);
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:var(--color-sorra);
+    cursor:pointer;
+    z-index:2;
+}
+
+.gallery-arrow:first-of-type{
+    left:25px;
+}
+
+.gallery-arrow:last-of-type{
+    right:25px;
+}
+
+.left-arrow{
+    left:25px;
+}
+
+.right-arrow{
+    right:25px;
+}
+
+.gallery-arrow:hover{
+    opacity:.6;
+}
+
+/* LLEGIR MÉS */
+
+.more-text{
+    display:none;
+}
+
+.more-text.show{
+    display:inline;
+}
+
+.read-more-btn{
+    background:none;
+    border:none;
+    padding:0;
+    margin-top:10px;
+    font-family:inherit;
+    font-size:.95rem;
+    font-weight:bold;
+    color:inherit;
+    text-decoration:underline;
+    cursor:pointer;
+    align-self:flex-start;
+}
+
+.read-more-btn:hover{
+    opacity:.7;
+}
+
+/* META */
+
+.project-meta{
+    margin-top:auto;
+    padding-top:20px;
+    font-size:.85rem;
+    color:#666;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+}
+
+/* BOTÓ FORMULARI */
+
+.contact-form button{
+    margin-top:40px;
+    width:fit-content;
+    padding:16px 38px;
+    border:1px solid var(--color-text);
+    background:transparent;
+    color:var(--color-text);
+    font-family:var(--font-text);
+    font-size:.9rem;
+    font-weight:var(--font-medium);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    background:var(--color-cel);
+    border-color:var(--color-cel);
+}
+
+/* -------------------- */
+/* CONTACTE */
+/* -------------------- */
+.contact{
+    background:var(--color-blanc);
+    padding:60px var(--marge-lateral) 180px;
+}
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:80px;
+    align-items:start;
+}
+
+.contact h2{
+    margin-bottom:20px;
+}
+
+.contact-details p{
+    margin-bottom:30px;
+    max-width:none;
+}
+
+.contact-item{
+    display:block;
+    margin-bottom:20px;
+    font-weight:var(--font-medium);
+    transition:.3s;
+}
+
+.contact-item:hover{
+    opacity:.7;
+}
+
+.instagram-link{
+    display:inline-block;
+    transition:.3s;
+}
+
+.instagram-link:hover{
+    opacity:.7;
+}
+
+.instagram-icon{
+    width:32px;
+    height:32px;
+    object-fit:contain;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    margin-top:115px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:24px 0;
+    border:none;
+    border-bottom:1px solid var(--color-text);
+    background:transparent;
+    font-family:var(--font-text);
+    font-size:1rem;
+    color:var(--color-text);
+    outline:none;
+}
+
+.contact-form textarea{
+    min-height:160px;
+    resize:vertical;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color:var(--color-text);
+    opacity:.6;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-bottom:2px solid var(--color-text);
+}
+
+.contact-form button{
+    margin-top:40px;
+    width:fit-content;
+    padding:16px 38px;
+    border:1px solid var(--color-text);
+    background:transparent;
+    color:var(--color-text);
+    font-family:var(--font-text);
+    font-size:.9rem;
+    font-weight:var(--font-medium);
+    text-transform:uppercase;
+    letter-spacing:.08em;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.contact-form button:hover{
+    background:var(--color-cel);
+    border-color:var(--color-cel);
+}
+
+.success-message{
+    display:none;
+    width:100%;
+    padding:40px;
+    margin-top:140px;
+    border:1px solid var(--color-text);
+    border-radius:12px;
+    color:var(--color-text);
+}
+
+.success-message.show{
+    display:block;
+}
+
+.success-message h3{
+    margin-bottom:10px;
+    font-size:2rem;
+    font-weight:var(--font-bold);
+}
+
+.success-message p{
+    font-size:1rem;
+    line-height:1.6;
+}
+
+/* -------------------- */
+/* FOOTER */
+/* -------------------- */
+
+footer{
+    padding:30px var(--marge-lateral);
+    background-color:var(--color-cel);
+}
+
+.contact-info{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    align-items:center;
+}
+
+.contact-info .logo{
+    justify-self:start;
+}
+
+.footer-center{
+    justify-self:center;
+    text-align:center;
+}
+
+.footer-center .contact-link{
+    display:block;
+}
+
+.contact-right{
+    justify-self:end;
+    display:flex;
+    align-items:center;
+}
+
+.contact-link{
+    transition:.3s;
+}
+
+.contact-link:hover{
+    opacity:.7;
+}
+
+.instagram-icon{
+    width:24px;
+    height:24px;
+    transition:.3s;
+}
+
+.instagram-icon:hover{
+    opacity:.7;
+}
+
+/* -------------------- */
+/* TABLET 1024px */
+/* -------------------- */
+
+@media (max-width:1024px){
+
+    :root{
+        --marge-lateral:5%;
+    }
+
+    .about,
+    .work,
+    .experience,
+    .contact{
+        padding:80px var(--marge-lateral);
+    }
+    
+    /* SOBRE MI */
+    .about{
+        margin-top:80px;
+        grid-template-columns:1fr 1fr;
+        gap:40px;
+        align-items:center;
+    }
+
+    .about-images img{
+        height: 380px;
+        margin-top: 90px;
+    }
+    
+    /* PROJECTES*/
+    .grid{
+        display:flex;
+        overflow-x:auto;
+        gap:20px;
+        scroll-snap-type:x mandatory;
+        scrollbar-width:none;
+    }
+
+    .grid::-webkit-scrollbar{
+        display:none;
+    }
+
+    .grid > *{
+        flex:0 0 60%;
+        scroll-snap-align:start;
+    }
+
+    .work-image img{
+        width:70%;
+        margin:0 auto;
+        display:block;
+    }
+
+    /* ESTUDIS */
+    .item{
+        gap:2rem;
+    }
+
+    .services-image{
+        width:40%;
+    }
+
+    /* CONTACTE */
+    .contact-container{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:50px;
+        align-items:start;
+    }
+
+    .contact-form{
+        margin-top: 70px;
+    }
+}
+
+/* -------------------- */
+/* MÒBIL 430px */
+/* -------------------- */
+
+@media (max-width: 430px){
+
+    :root{
+        --marge-lateral: 6%;
+    }
+
+    /* HEADER */
+
+    nav{
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+
+    nav div{
+        display:flex;
+        flex-direction:row;
+        gap:12px;
+        justify-content:center;
+    }
+
+    .logo img{
+        height:45px;
+    }
+
+    nav a{
+        font-size:0.75rem;
+    }
+
+    /* HERO */
+
+    .hero-content{
+        padding-top:120px;
+        text-align:left;
+    }
+
+    .hero-content h1{
+        font-size:4rem;
+    }
+
+    .intro{
+        font-size:1rem;
+    }
+
+    /* SOBRE MI */
+
+    .about{
+        grid-template-columns:1fr;
+        gap:30px;
+        margin-top:0;
+        padding:60px var(--marge-lateral);
+    }
+
+    .about-images img{
+        height:250px;
+    }
+
+/* ESTUDIS */
+
+.services-content{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    gap:20px;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+    padding:0 var(--marge-lateral);
+}
+
+.services-content::-webkit-scrollbar{
+    display:none;
+}
+
+.item{
+    flex:0 0 110%;
+    min-width:100%;
+    scroll-snap-align:start;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.services-image{
+    width:100%;
+}
+
+.services-image img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    display:block;
+}
+
+.services-dots{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:20px;
+}
+
+.services-dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#ccc;
+    transition:.3s;
+}
+
+.services-dot.active{
+    background:var(--color-text);
+}
+
+/* PROJECTES */
+
+.grid{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    gap:20px;
+    scroll-snap-type:x mandatory;
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+    padding:0 var(--marge-lateral);
+}
+
+.grid::-webkit-scrollbar{
+    display:none;
+}
+
+.grid article{
+    flex:0 0 110%;
+    min-width:100%;
+    scroll-snap-align:start;
+}
+
+article img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.project-gallery img,
+.project-gallery img.bodoni-portada{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.gallery-arrow{
+    width:35px;
+    height:35px;
+    top:165px;
+}
+
+.left-arrow{
+    left:10px;
+}
+
+.right-arrow{
+    right:10px;
+}
+
+.project-dots{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-top:20px;
+}
+
+.dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:#ccc;
+    transition:.3s;
+}
+
+.dot.active{
+    background:var(--color-text);
+}
+
+    /* CONTACTE */
+
+    .contact{
+        padding:60px var(--marge-lateral) 100px;
+    }
+
+    .contact-container{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .contact-form{
+        margin-top:0;
+    }
+
+    .contact-form button{
+        width:100%;
+    }
+
+    /* FOOTER */
+
+    .contact-info{
+        grid-template-columns:1fr;
+        gap:20px;
+        text-align:center;
+    }
+
+    .contact-info .logo,
+    .footer-center,
+    .contact-right{
+        justify-self:center;
+    }
+
+    /* TIPOGRAFIA */
+
+    .about h2,
+    .work h2,
+    .experience h2,
+    .contact h2{
+        font-size:3rem;
+    }
+
+    h3{
+        font-size:1.5rem;
+    }
+}
