@@ -709,6 +709,10 @@ footer{
         padding:60px var(--marge-lateral);
     }
 
+    .about-images{
+        margin-top:-80px;
+    }
+
     .about-images img{
         height:250px;
     }
@@ -842,35 +846,57 @@ article img{
 
     /* CONTACTE */
 
-    .contact{
-        padding:60px var(--marge-lateral) 100px;
+     .contact-details h2{
+        margin-bottom:20px;
+        text-align:center;
     }
 
-    .contact-container{
-        grid-template-columns:1fr;
-        gap:40px;
+    .contact-row{
+        flex-direction:column;
+        align-items:center;
+        gap:15px;
+        text-align:center;
     }
 
-    .contact-form{
-        margin-top:0;
-    }
-
-    .contact-form button{
+    .contact-row p{
         width:100%;
+        flex:none;
+    }
+
+    .contact-item{
+        white-space:normal;
+        text-align:center;
+    }
+
+    .instagram-icon{
+        width:28px;
+        height:28px;
     }
 
     /* FOOTER */
 
+    footer{
+        padding:20px;
+    }
+
     .contact-info{
         grid-template-columns:1fr;
         gap:20px;
+        justify-items:center;
         text-align:center;
     }
 
-    .contact-info .logo,
-    .footer-center,
-    .contact-right{
+    .logo{
         justify-self:center;
+    }
+
+    .logo img{
+        height:50px;
+    }
+
+    .back-to-top{
+        justify-self:center;
+        font-size:1.8rem;
     }
 
     /* TIPOGRAFIA */
