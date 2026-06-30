@@ -785,7 +785,7 @@ footer{
     scroll-snap-type:x mandatory;
     scrollbar-width:none;
     -webkit-overflow-scrolling:touch;
-    padding:0 var(--marge-lateral);
+    padding:0 var(--marge-lateral) 0 0; /* sense marge a l'esquerra */
 }
 
 .grid::-webkit-scrollbar{
@@ -846,32 +846,36 @@ article img{
 
     /* CONTACTE */
 
-     .contact-details h2{
-        margin-bottom:20px;
-        text-align:center;
-    }
+.contact-details h2{
+    margin-bottom:20px;
+    text-align:center;
+}
 
-    .contact-row{
-        flex-direction:column;
-        align-items:center;
-        gap:15px;
-        text-align:center;
-    }
+.contact-row{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;   
+    gap:15px;
+}
 
-    .contact-row p{
-        width:100%;
-        flex:none;
-    }
+.contact-row p{
+    width:140%;
+    text-align:left;
+}
 
-    .contact-item{
-        white-space:normal;
-        text-align:center;
-    }
+.contact-item{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:8px;
+    text-align:left;
+    white-space:normal;
+}
 
-    .instagram-icon{
-        width:28px;
-        height:28px;
-    }
+.instagram-icon{
+    width:28px;
+    height:28px;
+}
 
     /* FOOTER */
 
