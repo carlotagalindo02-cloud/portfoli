@@ -197,7 +197,6 @@ nav a:not(.logo):hover{
     margin: 0;
     line-height: 0.9;
     white-space: nowrap;
-    font-size: clamp(2rem, 5vw, 5rem);
 }
 
 .about-text p {
@@ -207,7 +206,7 @@ nav a:not(.logo):hover{
 }
 
 .about-images {
-    margin-top: 90px;
+    margin-top: 135px;
 }
 
 .about-images img {
