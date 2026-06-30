@@ -785,7 +785,7 @@ footer{
     scroll-snap-type:x mandatory;
     scrollbar-width:none;
     -webkit-overflow-scrolling:touch;
-    padding:0 var(--marge-lateral) 0 0; /* sense marge a l'esquerra */
+    padding:0 var(--marge-lateral) 0 0;
 }
 
 .grid::-webkit-scrollbar{
@@ -793,7 +793,7 @@ footer{
 }
 
 .grid article{
-    flex:0 0 110%;
+    flex:0 0 100%;
     min-width:100%;
     scroll-snap-align:start;
 }
