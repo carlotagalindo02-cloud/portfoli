@@ -181,37 +181,42 @@ nav a:not(.logo):hover{
 /* SOBRE MI */
 /* -------------------- */
 
-.about{
-    background:var(--color-blanc);
-    margin-top:100px; 
-    padding:100px var(--marge-lateral);
-    display:grid;
-    grid-template-columns:1fr 800px;
-    gap:80px;
-    align-items:start;
+.about {
+    background: var(--color-blanc);
+    margin-top: 100px;
+    padding: 100px var(--marge-lateral);
+    display: grid;
+    grid-template-columns: 1fr 800px;
+    gap: 80px;
+    align-items: start;
 }
 
-.about-text h2{
-    margin:0;
-    line-height:.9;
+.about-text {
+    min-width: 0;
 }
 
-.about-text p{
-    margin-top:20px;
-    margin-bottom:0;
-    max-width:650px;
+.about-text h2 {
+    margin: 0;
+    line-height: 0.9;
+    white-space: nowrap;
+    font-size: clamp(2rem, 5vw, 5rem);
 }
 
-.about-images{
-    display:block;
-    margin-top: 136px;
+.about-text p {
+    margin-top: 20px;
+    margin-bottom: 0;
+    max-width: 650px;
 }
 
-.about-images img{
-    width:100%;
+.about-images {
+    margin-top: 90px;
+}
+
+.about-images img {
+    display: block;
+    width: 100%;
     height: 300px;
-    object-fit:cover;
-    display:block;
+    object-fit: cover;
 }
 
 /* -------------------- */
@@ -493,133 +498,46 @@ article p{
 /* -------------------- */
 /* CONTACTE */
 /* -------------------- */
-.contact{
-    background:var(--color-blanc);
-    padding:60px var(--marge-lateral) 180px;
+
+.contact-details h2 {
+    margin-bottom: 30px;
 }
 
-.contact-container{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:80px;
-    align-items:start;
+.contact-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: nowrap;
 }
 
-.contact h2{
-    margin-bottom:20px;
+.contact-row p {
+    margin: 0;
+    flex: 1;
 }
 
-.contact-details p{
-    margin-bottom:30px;
-    max-width:none;
+.contact-item {
+    margin: 0;
+    white-space: nowrap;
+    text-decoration: none;
+    color: inherit;
 }
 
-.contact-item{
-    display:block;
-    margin-bottom:20px;
-    font-weight:var(--font-medium);
-    transition:.3s;
+.instagram-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 }
 
-.contact-item:hover{
-    opacity:.7;
+.instagram-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-.instagram-link{
-    display:inline-block;
-    transition:.3s;
-}
-
-.instagram-link:hover{
-    opacity:.7;
-}
-
-.instagram-icon{
-    width:32px;
-    height:32px;
-    object-fit:contain;
-}
-
-.contact-form{
-    display:flex;
-    flex-direction:column;
-    width:100%;
-    margin-top:115px;
-}
-
-.contact-form input,
-.contact-form textarea{
-    width:100%;
-    padding:24px 0;
-    border:none;
-    border-bottom:1px solid var(--color-text);
-    background:transparent;
-    font-family:var(--font-text);
-    font-size:1rem;
-    color:var(--color-text);
-    outline:none;
-}
-
-.contact-form textarea{
-    min-height:160px;
-    resize:vertical;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder{
-    color:var(--color-text);
-    opacity:.6;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus{
-    border-bottom:2px solid var(--color-text);
-}
-
-.contact-form button{
-    margin-top:40px;
-    width:fit-content;
-    padding:16px 38px;
-    border:1px solid var(--color-text);
-    background:transparent;
-    color:var(--color-text);
-    font-family:var(--font-text);
-    font-size:.9rem;
-    font-weight:var(--font-medium);
-    text-transform:uppercase;
-    letter-spacing:.08em;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.contact-form button:hover{
-    background:var(--color-cel);
-    border-color:var(--color-cel);
-}
-
-.success-message{
-    display:none;
-    width:100%;
-    padding:40px;
-    margin-top:140px;
-    border:1px solid var(--color-text);
-    border-radius:12px;
-    color:var(--color-text);
-}
-
-.success-message.show{
-    display:block;
-}
-
-.success-message h3{
-    margin-bottom:10px;
-    font-size:2rem;
-    font-weight:var(--font-bold);
-}
-
-.success-message p{
-    font-size:1rem;
-    line-height:1.6;
+.instagram-icon:hover {
+    transform: scale(1.1);
 }
 
 /* -------------------- */
@@ -633,45 +551,29 @@ footer{
 
 .contact-info{
     display:grid;
-    grid-template-columns:1fr 1fr 1fr;
+    grid-template-columns:1fr auto;
     align-items:center;
 }
 
-.contact-info .logo{
+.logo{
     justify-self:start;
 }
 
-.footer-center{
-    justify-self:center;
-    text-align:center;
-}
-
-.footer-center .contact-link{
+.logo img{
+    height:60px;
     display:block;
 }
 
-.contact-right{
+.back-to-top{
     justify-self:end;
-    display:flex;
-    align-items:center;
+    font-size:2rem;
+    color:var(--color-text);
+    text-decoration:none;
+    transition:opacity .3s ease;
 }
 
-.contact-link{
-    transition:.3s;
-}
-
-.contact-link:hover{
-    opacity:.7;
-}
-
-.instagram-icon{
-    width:24px;
-    height:24px;
-    transition:.3s;
-}
-
-.instagram-icon:hover{
-    opacity:.7;
+.back-to-top:hover{
+    opacity:.6;
 }
 
 /* -------------------- */
