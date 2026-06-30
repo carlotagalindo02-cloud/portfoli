@@ -17,7 +17,7 @@
 :root{
     --marge-lateral:4%;
 
-    --color-sorra: #D6E3F0;
+    --color-sorra:#D6E3F0;
     --color-cel:#A9BFD4;
     --color-blanc:#FFFFFF;
 
@@ -43,7 +43,6 @@ html{
 
 body{
     font-family:var(--font-text);
-    background:var(--color-fons);
     color:var(--color-text);
     line-height:1.6;
 }
@@ -119,7 +118,7 @@ footer{
     width:100%;
     padding:30px var(--marge-lateral);
     z-index:10;
-    background: var(--color-cel);
+    background:var(--color-cel);
 }
 
 nav{
@@ -133,18 +132,17 @@ nav div{
     gap:30px;
 }
 
-nav a {
-    text-transform: uppercase;
-    font-size: .9rem;
-    font-weight: var(--font-medium);
-    text-decoration: none;
-    color: inherit;
-    opacity: 1;
-    transition: opacity 0.3s ease;
+nav a{
+    text-transform:uppercase;
+    font-size:.9rem;
+    font-weight:var(--font-medium);
+    color:inherit;
+    opacity:1;
+    transition:opacity .3s ease;
 }
 
 nav a:not(.logo):hover{
-    opacity: 0.5;
+    opacity:.5;
 }
 
 .logo img{
@@ -157,16 +155,16 @@ nav a:not(.logo):hover{
 /* -------------------- */
 
 .hero-content{
-    min-height: 100vh;
-    padding: 0 var(--marge-lateral);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url("../sobremi/ivan-bandura-WhIff5iuW-E-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white; 
+    min-height:100vh;
+    padding:0 var(--marge-lateral) 20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    background-image:url("../sobremi/ivan-bandura-WhIff5iuW-E-unsplash.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    color:white;
 }
 
 .hero-content .small{
